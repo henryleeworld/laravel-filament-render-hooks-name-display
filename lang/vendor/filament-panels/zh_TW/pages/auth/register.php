@@ -10,7 +10,7 @@ return [
 
         'login' => [
             'before' => '或',
-            'label' => '登入您的帳戶',
+            'label' => '登入您的帳號',
         ],
 
     ],
