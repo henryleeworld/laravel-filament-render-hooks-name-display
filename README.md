@@ -1,4 +1,4 @@
-# Laravel 11 Filament 渲染鉤子名稱顯示
+# Laravel 12 Filament 渲染鉤子名稱顯示
 
 Filament 渲染鉤子名稱顯示採用快速建立簡捷的 TALL（Tailwind CSS、Alpine.js、Laravel 和 Livewire）堆疊應用程式的工具組，Filament 允許在框架視圖的多個節點渲染 Blade 模板內容。這使得插件可以注入 HTML 到框架中。
 
@@ -21,11 +21,15 @@ $ php artisan key:generate
 ```sh
 $ php artisan migrate --seed
 ```
+- 執行 __Artisan__ 指令的 __queue:work__ 來處理被推送進隊列內的新任務。
+```sh
+$ php artisan queue:work
+```
 - 在瀏覽器中輸入已定義的路由 URL 來訪問，例如：http://127.0.0.1:8000。
 - 你可以經由 `/admin/login` 來進行登入，預設的電子郵件和密碼分別為 __admin@admin.com__ 和 __password__ 。
 
 ----
 
 ## 畫面截圖
-![](https://i.imgur.com/ARz72yh.png)
+![](https://i.imgur.com/hzSGLWh.png)
 > 顯示渲染鉤子名稱

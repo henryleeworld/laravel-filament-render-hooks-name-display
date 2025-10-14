@@ -3,11 +3,12 @@
 namespace App\Filament\Widgets;
 
 use App\Models\User;
-use Filament\Tables;
+use Filament\Tables\Columns\TextColumn;
 use Filament\Tables\Table;
-use Filament\Widgets\TableWidget as BaseWidget;
+use Filament\Widgets\TableWidget;
+use Illuminate\Database\Eloquent\Builder;
 
-class VerifyUsers extends BaseWidget
+class VerifyUsers extends TableWidget
 {
     /**
      * @deprecated Override the `table()` method to configure the table.
@@ -20,14 +21,12 @@ class VerifyUsers extends BaseWidget
     public function table(Table $table): Table
     {
         return $table
-            ->query(
-                User::where('email_verified_at', null)
-            )
+            ->query(fn (): Builder => User::where('email_verified_at', null))
             ->columns([
-                Tables\Columns\TextColumn::make('name')
+                TextColumn::make('name')
                     ->label(__('Name'))
                     ->searchable(),
-                Tables\Columns\TextColumn::make('email')
+                TextColumn::make('email')
                     ->label(__('Email'))
                     ->searchable(),
             ]);

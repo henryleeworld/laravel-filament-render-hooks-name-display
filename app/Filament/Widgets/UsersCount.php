@@ -3,10 +3,10 @@
 namespace App\Filament\Widgets;
 
 use App\Models\User;
-use Filament\Widgets\StatsOverviewWidget as BaseWidget;
+use Filament\Widgets\StatsOverviewWidget;
 use Filament\Widgets\StatsOverviewWidget\Stat;
 
-class UsersCount extends BaseWidget
+class UsersCount extends StatsOverviewWidget
 {
     protected function getStats(): array
     {
